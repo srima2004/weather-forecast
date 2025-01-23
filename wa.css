@@ -1,0 +1,102 @@
+body{
+    position: relative;
+    background-image: url(bg.webp);
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    align-items: center;
+ flex-direction: column;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ background-color: rgb(249, 203, 211);
+ animation: zoom 15s infinite alternate;
+ 
+ 
+}
+@keyframes zoom {
+    0%{
+        background-size:100%;
+    }
+    100%{
+        background-size:120%; 
+       
+    }
+}
+
+
+
+
+.weatherForm{
+    margin: 30px;
+   
+}
+
+.cityInput{
+    font-size: 1.7rem;
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+    margin: 2px;
+    padding: 10px;
+}
+
+button[type="submit"]{
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    background-color:hsla(21, 100%, 16%, 0.939);
+    color: white;
+    border: none;
+}
+button[type="submit"]:hover{
+    background-color:hsl(350, 39%, 60%) ;
+}
+.card{
+    display: flex;
+   flex-direction: column;
+    align-items: center;
+   width: 500px;
+   border-radius: 25px;
+   padding: 30px;
+   background-color:hsla(21, 93%, 18%, 0.5);
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.953);
+    animation: bloom 2s ease-in-out forwards;
+   
+}
+
+@keyframes bloom {
+    0%,100% {
+        transform: scale(0.9);
+        box-shadow: 2px 2px 10px hsla(0, 0%, 0%, 0.25);
+    }
+    50%{
+        transform: scale(1);
+        box-shadow: 4px 4px 20px hsla(0, 0%, 0%, 0.4);
+    }
+}
+h1{
+    font-size: 2rem;
+
+}
+p{
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+.cityDisplay,.tempDisplay{
+    font-weight: bold;
+}
+.humidityDisplay{
+    font-size: 1.2rem;
+}
+.descDisplay{
+    font-style: italic;
+}
+.weatherEmoji{
+    font-size: 4rem;
+}
+.errorDisplay{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.75);
+}
